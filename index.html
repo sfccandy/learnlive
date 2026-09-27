@@ -16,8 +16,8 @@
   --accent:#8B3040;
   --bg-main:#F0C8B8;--bg-section:#F7DDD4;--bg-card:#FFFFFF;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans TC',sans-serif;background:var(--bg-main);color:var(--text);line-height:1.7;overflow-x:hidden}
+html{overflow-x:hidden;scroll-behavior:smooth;max-width:100vw}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--bg-main);color:var(--text);line-height:1.7;overflow-x:hidden;max-width:100vw}
 
 nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(240,200,184,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(181,96,106,0.25);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-logo{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:var(--accent);letter-spacing:1px;white-space:nowrap;flex-shrink:0}
@@ -155,8 +155,8 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 .gallery-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
 .gallery-grid3 img{width:100%;border-radius:14px;box-shadow:0 4px 16px rgba(181,96,106,0.12);object-fit:cover;aspect-ratio:3/4;display:block}
 
-.compare-table{width:100%;border-collapse:collapse;margin-top:32px;background:rgba(255,255,255,0.8);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(181,96,106,0.08)}
-.compare-table th,.compare-table td{padding:14px 18px;text-align:left;font-size:14px;border-bottom:1px solid rgba(181,96,106,0.1)}
+.compare-table{width:100%;table-layout:fixed;border-collapse:collapse;margin-top:32px;background:rgba(255,255,255,0.8);border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(181,96,106,0.08)}
+.compare-table th,.compare-table td{padding:14px 18px;text-align:left;font-size:14px;border-bottom:1px solid rgba(181,96,106,0.1);word-break:break-word;overflow-wrap:break-word}
 .compare-table th{background:rgba(212,175,122,0.15);color:var(--accent);font-family:'Noto Serif TC',serif;font-size:15px}
 .compare-table td:first-child{color:var(--text3)}
 .compare-table td:last-child{color:var(--rose);font-weight:700}
@@ -173,6 +173,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 
 .faq-item{background:rgba(255,255,255,0.7);border:1px solid rgba(181,96,106,0.12);border-radius:14px;margin-bottom:12px;overflow:hidden}
 .faq-item summary{padding:18px 24px;cursor:pointer;font-weight:700;color:var(--accent);font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-item summary span{flex:1;min-width:0;word-break:break-word;overflow-wrap:break-word}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:'+';font-size:20px;color:var(--gold);transition:transform .2s;flex-shrink:0}
 .faq-item[open] summary::after{transform:rotate(45deg)}
@@ -220,6 +221,13 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
   .gallery-grid{grid-template-columns:1fr !important;gap:20px !important}
   .gallery-grid > div{width:100%;max-width:400px;margin:0 auto}
 }
+
+/* global horizontal-overflow safety net (mobile webviews) */
+#page-live, #page-ec, nav, .track-bar, .mobile-menu{max-width:100vw}
+#page-live *, #page-ec *{max-width:100%;box-sizing:border-box}
+#page-live img, #page-ec img{height:auto}
+.hero-grid, .hero-grid > div, .hero-visual, .hero-tag{min-width:0}
+.week-card,.price-card,.faq-item,.audience-card,.promise-card,.student-card,.course-card,.outcome-card{min-width:0}
 
 </style>
 </head>
@@ -663,7 +671,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 <section id="ec-faq">
   <div class="section-tag">常見問題</div>
   <div class="section-title">報名前，<span>先解答你的疑慮</span></div>
-  <details class="faq-item"><summary>Q1｜完全沒有賣貨經驗可以參加嗎？</summary><div class="faq-a">可以。課程會從 IG 定位、內容、私域到成交逐步帶著做，適合剛開始接觸網路賣貨的新手。</div></details><details class="faq-item"><summary>Q2｜我沒有自己的商品可以參加嗎？</summary><div class="faq-a">可以。第三週會有合作商品提供學員進行實際開團販售，讓沒有自己商品的人也能先體驗完整的開團流程。實際合作商品與販售規則依當期合作安排為準。</div></details><details class="faq-item"><summary>Q3｜一定要有很多 IG 粉絲嗎？</summary><div class="faq-a">不需要。這堂課的重點不是追求大量粉絲，而是學會如何從現有流量開始建立信任、導入私域並完成成交。</div></details><details class="faq-item"><summary>Q4｜需要自己囤貨嗎？</summary><div class="faq-a">課程第三週的合作開團商品由課程方提供，學員不需要自行備貨。實際供貨、物流及結算方式依當期合作商品規則為準。</div></details><details class="faq-item"><summary>Q5｜上課時間怎麼安排？</summary><div class="faq-a">每週一次線上課程，每次約2小時，共4週。</div></details><details class="faq-item"><summary>Q6｜當週上完課就結束嗎？</summary><div class="faq-a">不是。每週課程後會有實作任務，完成後由老師進行回饋與複盤，陪你一路完成四週的賣貨實戰。</div></details><details class="faq-item"><summary>Q7｜第三週真的會賣東西嗎？</summary><div class="faq-a">會。第三週會直接進入真實開團販售，不是單純做模擬練習。</div></details><details class="faq-item"><summary>Q8｜如果我平常有工作／副業，也可以參加嗎？</summary><div class="faq-a">可以。課程採每週一次線上課程＋課後實作的方式，讓你可以依自己的時間完成每週任務。</div></details>
+  <details class="faq-item"><summary><span>Q1｜完全沒有賣貨經驗可以參加嗎？</span></summary><div class="faq-a">可以。課程會從 IG 定位、內容、私域到成交逐步帶著做，適合剛開始接觸網路賣貨的新手。</div></details><details class="faq-item"><summary><span>Q2｜我沒有自己的商品可以參加嗎？</span></summary><div class="faq-a">可以。第三週會有合作商品提供學員進行實際開團販售，讓沒有自己商品的人也能先體驗完整的開團流程。實際合作商品與販售規則依當期合作安排為準。</div></details><details class="faq-item"><summary><span>Q3｜一定要有很多 IG 粉絲嗎？</span></summary><div class="faq-a">不需要。這堂課的重點不是追求大量粉絲，而是學會如何從現有流量開始建立信任、導入私域並完成成交。</div></details><details class="faq-item"><summary><span>Q4｜需要自己囤貨嗎？</span></summary><div class="faq-a">課程第三週的合作開團商品由課程方提供，學員不需要自行備貨。實際供貨、物流及結算方式依當期合作商品規則為準。</div></details><details class="faq-item"><summary><span>Q5｜上課時間怎麼安排？</span></summary><div class="faq-a">每週一次線上課程，每次約2小時，共4週。</div></details><details class="faq-item"><summary><span>Q6｜當週上完課就結束嗎？</span></summary><div class="faq-a">不是。每週課程後會有實作任務，完成後由老師進行回饋與複盤，陪你一路完成四週的賣貨實戰。</div></details><details class="faq-item"><summary><span>Q7｜第三週真的會賣東西嗎？</span></summary><div class="faq-a">會。第三週會直接進入真實開團販售，不是單純做模擬練習。</div></details><details class="faq-item"><summary><span>Q8｜如果我平常有工作／副業，也可以參加嗎？</span></summary><div class="faq-a">可以。課程採每週一次線上課程＋課後實作的方式，讓你可以依自己的時間完成每週任務。</div></details>
 </section>
 
 <div class="divider"></div>
