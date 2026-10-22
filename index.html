@@ -204,7 +204,8 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
   .free-class-wrap{padding:24px 20px}
   section{padding:60px 4%}
   .hero{padding:150px 4% 40px}
-  .hero h1{font-size:26px}
+  .hero h1{font-size:24px;word-break:break-word;overflow-wrap:break-word}
+  .section-title{word-break:break-word;overflow-wrap:break-word}
   .hero-sub{font-size:14px}
   .btn-primary,.btn-outline{padding:12px 20px;font-size:14px}
   .hero-btns{gap:10px}
@@ -504,7 +505,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
       </div>
       <div class="hero-btns">
         <a href="#ec-curriculum" onclick="event.preventDefault();scrollToId('ec-curriculum')" class="btn-primary">📖 查看4週課程內容</a>
-        <a href="#ec-pricing" onclick="event.preventDefault();scrollToId('ec-pricing')" class="btn-outline">早鳥報名 NT$12,800</a>
+        <a href="#ec-pricing" onclick="event.preventDefault();scrollToId('ec-pricing')" class="btn-outline">報名陪跑課程</a>
       </div>
     </div>
     <div class="hero-visual" style="display:flex;align-items:center;justify-content:center;position:relative">
@@ -520,7 +521,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 
 <section id="ec-pain">
   <div class="section-tag">你是不是也有這些問題？</div>
-  <div class="section-title">很多人不是不努力，<span>只是缺一個系統</span></div>
+  <div class="section-title" style="white-space:nowrap;font-size:clamp(15px,5vw,34px)">很多人不是不努力，<span>只是缺一個系統</span></div>
   <div class="pain-grid"><div class="pain-item"><span class="pain-x">✕</span>有產品，卻不知道怎麼開始賣</div>
 <div class="pain-item"><span class="pain-x">✕</span>有 IG，但每天不知道要發什麼</div>
 <div class="pain-item"><span class="pain-x">✕</span>限動有人看，卻很少成交</div>
@@ -536,7 +537,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 
 <section id="ec-audience">
   <div class="section-tag">這堂課適合誰</div>
-  <div class="section-title">先看看，<span>你是不是我們要找的人</span></div>
+  <div class="section-title" style="white-space:nowrap;font-size:clamp(14px,4.6vw,34px)">先看看，<span>你是不是我們要找的人</span></div>
   <div class="audience-grid">
     <div class="audience-card"><h3>✔ 適合你，如果你是</h3><ul><li><span style="color:var(--gold)">✦</span>電商新手：完全沒有賣貨經驗，想開始靠網路賣東西</li>
 <li><span style="color:var(--gold)">✦</span>有 IG 但不知道怎麼變現：有經營限動、短影音，卻不知道如何導購</li>
@@ -557,7 +558,7 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 <div class="courses-section" id="ec-curriculum">
   <div class="courses-intro">
     <div class="section-tag">課程形式</div>
-    <div class="section-title">4週實戰，<span>教學→實作→回饋→複盤</span></div>
+    <div class="section-title" style="white-space:nowrap;font-size:clamp(14px,4.6vw,34px)">4週實戰，<span>教學→實作→回饋→複盤</span></div>
     <p class="section-sub">每週線上直播上課，課後動手做，老師親自檢視作業並給建議，陪你一路把方法變成結果。</p>
   </div>
   <div class="format-strip">
@@ -649,15 +650,12 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 
 <section id="ec-pricing">
   <div class="section-tag" style="text-align:center">立即報名</div>
-  <div class="section-title" style="text-align:center">電商賣貨孵化陪跑計畫<span>｜4週實戰</span></div>
+  <div class="section-title" style="text-align:center;white-space:nowrap;font-size:clamp(14px,4.6vw,34px)">電商賣貨孵化陪跑計畫<span>｜4週實戰</span></div>
   <div class="price-card">
-    <div class="price-badge">早鳥優惠</div>
-    <div class="price-old">原價 NT$16,800</div>
-    <div class="price-new">NT$12,800<span> ／期</span></div>
+    <div class="price-new">NT$16,800<span> ／四週</span></div>
     <ul class="price-list"><li><span style="color:var(--gold)">✦</span>4週線上實戰課程（每週1堂，約2小時）</li><li><span style="color:var(--gold)">✦</span>課後實作任務＋作業檢視＋老師回饋</li><li><span style="color:var(--gold)">✦</span>IG 賣貨系統建立</li><li><span style="color:var(--gold)">✦</span>LINE 私域建置</li><li><span style="color:var(--gold)">✦</span>第三週真實開團販售（免自備商品）</li><li><span style="color:var(--gold)">✦</span>顧客經營與回購策略</li><li><span style="color:var(--gold)">✦</span>專屬學員社群</li><li><span style="color:var(--gold)">✦</span>結業複盤＋進階電商計畫優先名單</li></ul>
-    <a href="https://p.ecpay.com.tw/A0DB690" target="_blank" class="pay-btn">💳 立即報名，線上刷卡付款</a>
+    <a href="https://p.ecpay.com.tw/94110C8" target="_blank" class="pay-btn" style="white-space:nowrap;font-size:clamp(12px,4vw,16px);padding:16px 20px">💳 立即報名，線上刷卡付款</a>
     <div class="price-note">
-      早鳥名額／期限依當期招生公告為準。<br>
       <strong style="color:var(--rose)">完成付款後，請務必加入官方LINE回報訂單</strong>，以便安排開課通知與課程資料。
     </div>
     <div style="margin-top:20px">
@@ -706,9 +704,9 @@ footer{border-top:1px solid rgba(212,175,122,0.1);padding:40px 5%;text-align:cen
 <div class="final-cta">
   <div class="section-tag" style="text-align:center">下一步</div>
   <h2>準備好開始你的<span style="background:linear-gradient(135deg,var(--rose),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent">網路賣貨系統</span>了嗎？</h2>
-  <p>早鳥優惠 NT$12,800（原價 NT$16,800），4週實戰陪跑，一起把流量變成訂單。</p>
+  <p>4週實戰陪跑，一起把流量變成訂單。</p>
   <div class="final-btns">
-    <a href="https://p.ecpay.com.tw/A0DB690" target="_blank" class="pay-btn" style="font-size:17px;padding:18px 40px">💳 立即報名</a>
+    <a href="https://p.ecpay.com.tw/94110C8" target="_blank" class="pay-btn" style="font-size:17px;padding:18px 40px">💳 立即報名</a>
     <a href="https://line.me/R/ti/p/@588ehict" target="_blank" class="line-btn" style="font-size:17px;padding:18px 40px"><svg width="18" height="18" viewBox="0 0 24 24" style="flex-shrink:0"><path fill="currentColor" d="M12 3C6.48 3 2 6.69 2 11.2c0 4.02 3.58 7.39 8.4 8.05.33.07.78.22.89.5.1.26.07.66.03.92l-.14.9c-.04.26-.2 1.03.9.56 1.1-.47 5.95-3.5 8.12-6 1.52-1.67 2.24-3.36 2.24-5.24C22.44 6.69 17.96 3 12 3z"/></svg>加入官方LINE</a>
   </div>
   <p style="margin-top:24px;font-size:13px;color:var(--text3)">付款完成後請加入官方LINE回報訂單｜LINE ID：@588ehict ｜ IG：@sfccandy</p>
